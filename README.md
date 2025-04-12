@@ -30,7 +30,6 @@ An Angular application that visualizes transport routes with multi-level path gr
 ## Solution Implementation 🛠️
 
 ### Architecture
-```mermaid
 graph TD
     A[TripInputComponent] -->|Emits| B(TripService)
     B -->|Updates| C[TripVisualizationComponent]
