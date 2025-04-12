@@ -1,6 +1,6 @@
 # Trip Visualization ✈️
 
-![Demo](./public/demo-screenshot.png) <!-- Add screenshot showing levels -->
+![Demo](./public/demo-screenshot.png) 
 
 An Angular application that visualizes transport routes with multi-level path grouping as per the assignment specifications.
 
