@@ -1,59 +1,50 @@
-# TransportSimple
+# Trip Visualization ✈️
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+![Demo](./public/demo-screenshot.png) <!-- Add screenshot showing levels -->
 
-## Development server
+An Angular application that visualizes transport routes with multi-level path grouping as per the assignment specifications.
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
+### Core Functionality
+- **Input Fields**:
+  - Start Point (3-character code)
+  - End Point (3-character code)
+  **Example**
+  - Start: BLR (Bangalore)
+  - End: MAA (Chennai)
+ 
+  
+- **Visualization Rules**:
+  - **Level 1 (Primary Route)**:
+    - Straight line with arrow for non-continued trips
+    - Green solid line for continued trips (when trip end matches next start)
+  - **Level 2 (Duplicate Routes)**:
+    - Blue curved lines for consecutive identical trips
+    - Indented below primary routes
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Technical Specifications
+- Dynamic rendering of unlimited trips
+- Responsive layout adapting to any number of routes
+- Clean separation of concerns (components/services)
 
-## Code scaffolding
+## Solution Implementation 🛠️
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Architecture
+```mermaid
+graph TD
+    A[TripInputComponent] -->|Emits| B(TripService)
+    B -->|Updates| C[TripVisualizationComponent]
+    C --> D{Level Detection}
+    D -->|Continued| E[Level 1 - Green Line]
+    D -->|New Route| F[Level 1 - Arrow Line]
+    D -->|Duplicate| G[Level 2 - Curved Line]
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Add sample routes
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    BLR → MAA (Level 1 with arrow)
+    MAA → HYD (Level 1 continued - green line)
+    BLR → HYD (Level 1 with arrow)
+    HYD → DEL (Level 2 curved - duplicate)
+    HYD → DEL (Level 2 curved - duplicate)
+    DEL → BLR (Level 1 with arrow)
