@@ -1,0 +1,112 @@
+.visualization-container {
+    overflow-x: auto;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .trips-row {
+    display: flex;
+    align-items: center;
+    min-width: min-content;
+    gap: 1rem;
+  }
+  
+  .trip-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .route-segment {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .city-code {
+    background: #f3f4f6;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 3.5rem;
+    text-align: center;
+  }
+  
+  .connection-line {
+    position: relative;
+    width: 6rem;
+    height: 2px;
+  }
+  
+  .line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #374151;
+    transform: translateY(-50%);
+  }
+  
+  .continued-line {
+    background: #10b981 !important;
+  }
+  
+  .curved-line {
+    height: 40px;
+    top: -12px;
+    border-radius: 0 0 20px 20px;
+    border-bottom: 2px solid #3b82f6;
+    border-left: 2px solid #3b82f6;
+    border-right: 2px solid #3b82f6;
+    background: transparent !important;
+  }
+  
+  .arrow {
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #374151;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .trips-row {
+      gap: 0.5rem;
+    }
+    
+    .city-code {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.8rem;
+      min-width: 3rem;
+    }
+    
+    .connection-line {
+      width: 4rem;
+    }
+    
+    .curved-line {
+      height: 30px;
+      top: -8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .connection-line {
+      width: 3rem;
+    }
+    
+    .curved-line {
+      height: 25px;
+      top: -6px;
+    }
+  }

@@ -1,0 +1,48 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+  }
+  
+  h1::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background-color: #4CAF50;
+    bottom: 0;
+    left: 20%;
+    border-radius: 2px;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+    
+    h1 {
+      font-size: 24px;
+    }
+  }
+  

@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { TripInputComponent } from './components/trip-input/trip-input.component';
+import { TripVisualizationComponent } from './components/trip-visualization/trip-visualization.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [CommonModule, TripInputComponent, TripVisualizationComponent]
 })
 export class AppComponent {
-  title = 'transport-simple';
+  title = 'Transport Simple - Trip Visualization';
 }

@@ -1,0 +1,22 @@
+<!-- trip-visualization.component.html -->
+<div class="visualization-container" *ngIf="trips.length > 0">
+    <div class="trips-row">
+      <div *ngFor="let trip of trips; let i = index" 
+           class="trip-item"
+           [class.continued]="trip.isContinued"
+           [class.same-route]="trip.level === 2">
+        
+        <div class="route-segment">
+          <span class="city-code">{{ trip.startPoint }}</span>
+          <div class="connection-line">
+            <div class="line" [ngClass]="{'continued-line': trip.isContinued, 'curved-line': trip.level === 2}">
+              <div class="arrow" *ngIf="!trip.isContinued && trip.level === 1"></div>
+            </div>
+          </div>
+          <span class="city-code">{{ trip.endPoint }}</span>
+        </div>
+  
+        <div class="spacer" *ngIf="i !== trips.length - 1"></div>
+      </div>
+    </div>
+  </div>

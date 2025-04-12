@@ -1,0 +1,85 @@
+.trip-input-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    background-color: white;
+    text-transform: uppercase;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  input[type="text"]::placeholder {
+    text-transform: none;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .add-button {
+    background-color: #4CAF50;
+    color: white;
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .add-button:hover {
+    background-color: #43a047;
+  }
+  
+  .clear-button {
+    background-color: #f44336;
+    color: white;
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .clear-button:hover {
+    background-color: #e53935;
+  }
+  

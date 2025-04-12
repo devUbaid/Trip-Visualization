@@ -1,0 +1,27 @@
+<div class="trip-input-container">
+    <h2>Add New Trip</h2>
+    <div class="form-group">
+      <label for="startPoint">Start Point (3-letter code)</label>
+      <input 
+        type="text" 
+        id="startPoint" 
+        [(ngModel)]="startPoint" 
+        maxlength="3" 
+        placeholder="E.G. BLR"
+      >
+    </div>
+    <div class="form-group">
+      <label for="endPoint">End Point (3-letter code)</label>
+      <input 
+        type="text" 
+        id="endPoint" 
+        [(ngModel)]="endPoint" 
+        maxlength="3" 
+        placeholder="E.G. MAA"
+      >
+    </div>
+    <div class="button-group">
+      <button class="add-button" (click)="addTrip()">Add Trip</button>
+      <button class="clear-button" (click)="clearTrips()">Clear All</button>
+    </div>
+  </div>
